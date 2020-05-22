@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show Cast component should render shows cast component without crashing 1`] = `
+<div>
+  <section
+    class="sc-AxjAm jHXAgG"
+  >
+    <h2>
+      Cast
+    </h2>
+    <ul>
+      <li
+        data-testid="cast-list-0"
+      >
+        test
+         - 
+        test1
+      </li>
+    </ul>
+  </section>
+</div>
+`;
