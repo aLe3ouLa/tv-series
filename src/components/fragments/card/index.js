@@ -17,9 +17,10 @@ const Container = styled.li`
 const Title = styled.h5`
   padding: ${({ theme }) => theme.spacing.sm} 0;
   line-height: 2rem;
-  height: 5rem;
+  height: 7rem;
   @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
     padding: ${({ theme }) => theme.spacing.xs} 0;
+    height: 5rem;
   }
 `;
 

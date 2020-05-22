@@ -15,7 +15,11 @@ const Container = styled.li`
 const Title = styled.h5`
   padding: ${({ theme }) => theme.spacing.xs} 0;
   line-height: 2rem;
-  height: 5rem;
+  height: 7rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    height: 5rem;
+  }
 `;
 
 const Subtitle = styled.p`

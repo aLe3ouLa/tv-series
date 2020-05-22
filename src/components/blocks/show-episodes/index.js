@@ -6,7 +6,12 @@ import styled from "styled-components";
 const CardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  @media (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    & > * {
+      margin-right: ${({ theme }) => theme.spacing.sm};
+    }
+  }
 `;
 
 const ShowEpisodes = ({ groups }) => {
