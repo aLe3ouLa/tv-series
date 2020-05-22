@@ -1,6 +1,6 @@
 ## Tv shows with TVmaze API
 
-The user can search a show title and have a list of shows as a result. By clicking one, the user can redirect to appropriate route and see more information about the show, including an episode list grouped by Season. By clicking an episode, the user can have an information page about the episode.
+The user can search for a show title and the system will return with a list of shows as a result. By clicking one, the user can redirect to appropriate route and view more information about the show, including an episode list grouped by Season. By clicking an episode, the user can retrieve an information page about the episode.
 
 ### Explicit Requirements
 
