@@ -1,33 +1,19 @@
-import React from "react";
 import SearchInput from "./search-input";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-
-import configureStore from "redux-mock-store";
-const mockStore = configureStore([]);
 
 describe("Search Input component", () => {
   afterEach(cleanup);
 
-  let store;
-  beforeEach(() => {
-    store = mockStore({
-      search: { searchTerm: "test" },
-    });
-  });
-
   it("should have an input element", () => {
     const { getByTestId } = render(
-      <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <SearchInput />
-          </BrowserRouter>
-        </ThemeProvider>
-      </Provider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <SearchInput />
+        </BrowserRouter>
+      </ThemeProvider>
     );
     expect(getByTestId("input-field")).toBeInTheDocument();
   });
