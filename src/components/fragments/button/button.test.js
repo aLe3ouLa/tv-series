@@ -11,16 +11,6 @@ describe("Button component", () => {
   };
   afterEach(cleanup);
 
-  it("should render button component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button {...mockProps} />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("section have a button element", async () => {
     const { getByRole } = render(

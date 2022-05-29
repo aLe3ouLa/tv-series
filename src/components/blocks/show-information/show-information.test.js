@@ -17,16 +17,6 @@ describe("Show Information component", () => {
   };
   afterEach(cleanup);
 
-  it("should render shows information component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <React.Fragment>
-          <ShowInformation {...mockProps} />
-        </React.Fragment>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("titleWrapper should have two children", async () => {
     const { getByTestId } = render(
@@ -112,16 +102,4 @@ describe("Show Information component", () => {
     expect(sumamry.innerHTML).toBe("<p>Sum</p>");
   });
 
-  it("getByTestId throws error when no matching element exists", () => {
-    const { getByTestId } = render(
-      <ThemeProvider theme={theme}>
-        <React.Fragment>
-          <ShowInformation {...mockProps} />
-        </React.Fragment>
-      </ThemeProvider>
-    );
-    expect(() =>
-      getByTestId("unknown-data-testid")
-    ).toThrowErrorMatchingSnapshot();
-  });
 });

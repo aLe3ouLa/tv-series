@@ -1,5 +1,4 @@
-import React from "react";
-import Genres from "./genre";
+import { Genres } from "./genre";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
@@ -9,28 +8,18 @@ describe("Genre component", () => {
   afterEach(cleanup);
 
   const mockprops = {
-    genres: ["test"],
+    genres: ["test", "test2"],
   };
 
-  it("should render genre component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Genres {...mockprops} />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("should render genre component without crashing", () => {
-    const { getByTestId } = render(
+    const { getAllByTestId } = render(
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <Genres {...mockprops} />
+          <Genres genres={mockprops.genres} />
         </BrowserRouter>
       </ThemeProvider>
     );
-    expect(getByTestId("genre-list").querySelectorAll("span").length).toBe(1);
+    expect(getAllByTestId("genre-list").length).toBe(2);
   });
 });
