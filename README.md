@@ -6,7 +6,7 @@ The user can search for a show title and the system will return with a list of s
 
 - [x] Setup 3 routes, one for search, one for TV shows and one for episodes.
 - [x] Retrieve data from TV Maze REST API
-- [x] Setup state management and data flow using Redux
+- [x] Setup state management and data flow using Context API
 - [x] Style the components with CSS, with 3 breakpoings, desktop, tablet and mobile. Follow mobile first approach.
 - [x] Use of styled-components library for the CSS, using SCSS(SASS).
 
