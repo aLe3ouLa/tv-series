@@ -1,15 +1,17 @@
-import { Cast } from "./";
+import { Cast } from ".";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import { ICast } from "../../../types/ICast";
 
 describe("Show Cast component", () => {
   const mockProps = {
-    cast: [{ person: { name: "test" }, character: { name: "test1" } }],
+    cast: [
+      { person: { name: "test" }, character: { name: "test1" } },
+    ] as ICast[],
   };
   afterEach(cleanup);
-
 
   it.skip("section for episodes exists a li for a cast", async () => {
     const { getByTestId } = render(

@@ -1,5 +1,5 @@
 import React from "react";
-import ShowEpisodes from "./";
+import ShowEpisodes from ".";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
@@ -10,7 +10,6 @@ describe("Show Episodes component", () => {
     groups: [[{ id: "1", name: "test" }], [{ id: "2", name: "test1" }]],
   };
   afterEach(cleanup);
-
 
   it("section for episodes should render two children", async () => {
     const { getByTestId } = render(

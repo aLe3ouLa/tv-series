@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./";
+import Button from ".";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup, fireEvent } from "@testing-library/react";
@@ -10,7 +10,6 @@ describe("Button component", () => {
     onClick: jest.fn(),
   };
   afterEach(cleanup);
-
 
   it("section have a button element", async () => {
     const { getByRole } = render(

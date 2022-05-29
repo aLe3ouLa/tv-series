@@ -1,8 +1,9 @@
 import React from "react";
-import ShowInformation from "./";
+import ShowInformation from ".";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
+import { IShow } from "../../../types/IShow";
 
 describe("Show Information component", () => {
   const mockProps = {
@@ -14,9 +15,8 @@ describe("Show Information component", () => {
       medium: "img",
     },
     summary: "<p>Sum</p>",
-  };
+  } as IShow;
   afterEach(cleanup);
-
 
   it("titleWrapper should have two children", async () => {
     const { getByTestId } = render(
@@ -63,7 +63,9 @@ describe("Show Information component", () => {
       </ThemeProvider>
     );
 
-    expect(getByTestId("image-id").src).toEqual("http://localhost/img");
+    expect((getByTestId("image-id") as HTMLImageElement).src).toEqual(
+      "http://localhost/img"
+    );
   });
 
   it("genre container should have two children", async () => {
@@ -101,5 +103,4 @@ describe("Show Information component", () => {
     const sumamry = getByTestId("summary-html");
     expect(sumamry.innerHTML).toBe("<p>Sum</p>");
   });
-
 });
