@@ -1,5 +1,5 @@
 import React from "react";
-import Rating from "./";
+import Rating from "./rating";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";

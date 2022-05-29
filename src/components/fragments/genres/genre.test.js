@@ -1,5 +1,5 @@
 import React from "react";
-import Genres from "./";
+import Genres from "./genre";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
