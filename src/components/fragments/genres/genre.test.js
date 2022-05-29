@@ -12,16 +12,6 @@ describe("Genre component", () => {
     genres: ["test"],
   };
 
-  it("should render genre component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Genres {...mockprops} />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("should render genre component without crashing", () => {
     const { getByTestId } = render(

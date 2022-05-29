@@ -11,16 +11,6 @@ describe("Show Episodes component", () => {
   };
   afterEach(cleanup);
 
-  it("should render shows episode component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <ShowEpisodes {...mockProps} />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("section for episodes should render two children", async () => {
     const { getByTestId } = render(

@@ -11,16 +11,6 @@ describe("Show Cast component", () => {
   };
   afterEach(cleanup);
 
-  it("should render shows cast component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <ShowCast {...mockProps} />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("section for episodes exists a li for a cast", async () => {
     const { getByTestId } = render(

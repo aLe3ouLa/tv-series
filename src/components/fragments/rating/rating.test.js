@@ -8,16 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 describe("Rating component", () => {
   afterEach(cleanup);
 
-  it("should render rating component without crashing", () => {
-    const { container } = render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Rating />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("rating should have two children component", () => {
     const { getByTestId } = render(
