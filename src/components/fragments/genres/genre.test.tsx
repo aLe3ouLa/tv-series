@@ -11,7 +11,6 @@ describe("Genre component", () => {
     genres: ["test", "test2"],
   };
 
-
   it("should render genre component without crashing", () => {
     const { getAllByTestId } = render(
       <ThemeProvider theme={theme}>
