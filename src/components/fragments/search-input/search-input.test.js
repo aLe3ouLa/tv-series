@@ -1,5 +1,5 @@
 import React from "react";
-import SearchInput from "./";
+import SearchInput from "./search-input";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 import { render, cleanup } from "@testing-library/react";
@@ -17,19 +17,6 @@ describe("Search Input component", () => {
     store = mockStore({
       search: { searchTerm: "test" },
     });
-  });
-
-  it("should render search-input component without crashing", () => {
-    const { container } = render(
-      <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <SearchInput />
-          </BrowserRouter>
-        </ThemeProvider>
-      </Provider>
-    );
-    expect(container).toMatchSnapshot();
   });
 
   it("should have an input element", () => {
